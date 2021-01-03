@@ -1,8 +1,8 @@
 import 'package:event_system/model/my_access_token.dart';
 
 String getHost(){
-  return "https://f3cxrfevre.execute-api.eu-west-3.amazonaws.com/dev";
-  //return "http://10.0.2.2:8000";
+  //return "https://f3cxrfevre.execute-api.eu-west-3.amazonaws.com/dev";
+  return "http://10.0.2.2:8000";
 }
 
 class URLs {
@@ -19,6 +19,10 @@ class URLs {
   String migrateUserDetails = "/migrate/user_details";
   String migrateAction = "/migrate/action";
   String deviceStatus = "/migrate/deviceStatus";
+  String paymentsConfigUrl = "/payments/config/";
+  String paymentsSuccessUrl = "/payments/success";
+  String paymentsCancelUrl = "/payments/cancel";
+  String paymentsCheckoutUrl = "/payments/checkout/";
   
   String getSellMySellTokenUrl(MyAccessToken myAccessToken) => "/sell_tokens/" + myAccessToken.id.toString() + "/sell/";
   String getCancelSaleSellToken(MyAccessToken myAccessToken) => "/sell_tokens/" + myAccessToken.id.toString() + "/cancel/";
